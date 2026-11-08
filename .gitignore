@@ -1,0 +1,10 @@
+# Build y archivos del IDE
+target/
+.idea/
+*.iml
+out/
+
+# Temporales de Office y del sistema
+~$*
+Thumbs.db
+.DS_Store

@@ -1,0 +1,32 @@
+### 1. Consulta de todos los productos (200)
+GET http://localhost:8080/api/productos
+
+### 2. Consulta de un producto existente (200)
+GET http://localhost:8080/api/productos/1
+
+### 3. Consulta de un producto inexistente (404)
+GET http://localhost:8080/api/productos/99
+
+### 4. Registro de un producto válido (201)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+< ./producto-valido.json
+
+### 5. Registro con precio inválido (400)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+< ./producto-precio-invalido.json
+
+### 6. Registro con stock negativo (400)
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+< ./producto-stock-negativo.json
+
+### 7. Eliminación de un producto existente (204)
+DELETE http://localhost:8080/api/productos/2
+
+### 8. Eliminación de un producto inexistente (404)
+DELETE http://localhost:8080/api/productos/99
